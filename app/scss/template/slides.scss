@@ -1,0 +1,41 @@
+//## Slides
+@import "../_variables";
+@import "../_mixins";
+
+.slide {  
+    width: 100%;
+    height: 100%;
+    padding: 10vw;
+    text-align: center;
+    background-color: $gray-base;
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+
+    &__text {
+        color: $default;
+    }
+
+    &__image {
+        
+    }
+}
+
+.slide-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.slide-image-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);           
+}

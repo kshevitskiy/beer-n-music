@@ -1,0 +1,39 @@
+//## Card
+@import "../_variables";
+@import "../_mixins";
+
+.card {
+    width: 100%;
+    min-height: 300px;
+    box-shadow: 0 10px 20px rgba($gray-base, .1);
+    border-radius: 4px;
+    background-color: $default;
+    padding: 20px;
+    text-align: center;
+    @include transition(box-shadow .3s ease);
+
+    &:hover {
+        box-shadow: 0 15px 25px rgba($gray-base, .15);
+    }
+}
+
+.beer-card { 
+    cursor: pointer;   
+
+    &__image {
+        max-height: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__name {        
+        color: $primary;
+        display: block;
+        margin-top: 20px;
+    }
+
+    &__tagline {
+        font-size: $font-size-small;
+        margin-top: 5px;        
+    }
+}

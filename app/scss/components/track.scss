@@ -1,0 +1,35 @@
+//## Track
+@import "../_variables";
+@import "../_mixins";
+
+.playlist-wrapper {
+	margin-top: 30px;
+}
+
+.playlist-header {
+	margin-bottom: 10px;
+}
+
+.track {
+	margin-bottom: 10px;
+	@include flexbox;
+
+	&__cover {
+		display: block;
+		width: 65px;
+	}
+
+	&__title {
+		font-size: $font-size-small;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+}
+
+.track-cover-wrapper {
+	@include flex-shrink(0);
+}
+
+.track-meta-wrapper {
+	padding: 5px 10px;
+}

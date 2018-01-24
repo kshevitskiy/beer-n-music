@@ -1,0 +1,73 @@
+//## Beer
+@import "../_variables";
+@import "../_mixins";
+
+.beer {
+    @include flexbox; 
+
+    &__name {
+        color: $primary;
+    }   
+
+    &__tagline {
+
+        &::after {
+            content: '';
+            width: 40px;
+            height: 3px;
+            display: block;
+            background-color: $primary;
+            margin-top: 5px;
+        }
+    }
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        max-height: 300px;
+    }
+
+    &__copy {
+        font-size: $font-size-small;
+        color: $gray-light;
+    }
+
+    @include breakpoint(sm) {
+        @include flex-direction(column);
+    }
+}
+
+.beer-image-wrapper {
+    padding: 20px;
+    @include flex-shrink(0);   
+
+    @include breakpoint(sm) {
+        padding: 20px 0 40px;
+    }    
+}
+
+.beer-content-wrapper {
+    padding: 20px;
+
+    @include breakpoint(sm) {
+        padding: 0;
+    }
+}
+
+.beer-meta {
+    margin: 10px 0;
+}
+
+.beer-food {
+    margin-top: 20px;
+}
+
+.food-list {
+    list-style-type: disc;
+    margin: 0 0 10px 20px;
+    color: $gray-light;    
+
+    &__item {
+        font-size: $font-size-xtra-small;
+    }
+}

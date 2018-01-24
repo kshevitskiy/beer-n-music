@@ -1,0 +1,43 @@
+//## Animation
+@import "_variables";
+@import "_mixins";
+
+//** FadeIn animation
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+//** FadeInUp animation
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 50px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    will-change: opacity;
+    opacity: 0;    
+    animation-name: fadeIn;
+}
+
+.fadeInUp {
+    will-change: transform, opacity;
+    opacity: 0;    
+    animation-name: fadeInUp;
+}

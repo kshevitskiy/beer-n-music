@@ -1,0 +1,23 @@
+//## Buttons
+@import "../_variables";
+@import "../_mixins";
+
+button,
+.button {
+    appearance: none;
+    border: 0;
+    color: $gray;
+    padding: 4px 16px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    @include transition(background-color .3s ease);
+}
+
+.button-soundcloud {
+	font-size: $font-size-xtra-small;
+	background-color: $gray-lighter;
+
+	&:hover {
+		background-color: darken($gray-lighter, 5%);
+	}
+}

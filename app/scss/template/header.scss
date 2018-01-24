@@ -1,0 +1,49 @@
+//## Header
+@import "_variables";
+@import "_mixins";
+
+.app-header {
+    position: relative;
+    width: 100%;
+    padding: 0 0 5vh;
+}
+
+.app-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 320px;
+    width: 100%;
+}
+
+.dropdown {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+
+    &__button {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__content {
+        background-color: $default;
+        border-radius: $btn-border-radius;
+        box-shadow: 0 10px 40px rgba($gray-base, .1);
+        padding: 10PX 20px;
+        position: absolute;
+        top: 100%;
+    }
+}
+
+.list {
+
+    &__item {
+        border-bottom: 1px solid $gray-light;
+        display: block;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+}
